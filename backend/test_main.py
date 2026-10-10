@@ -90,6 +90,7 @@ def test_authenticated_me():
     assert response.json()["email"] == "test@example.com"
 
 def test_unauthenticated_me():
+    client.cookies.clear()
     response = client.get("/api/v1/auth/me")
     assert response.status_code == 401
 
@@ -127,15 +128,20 @@ def test_student_to_student_isolation():
     me_b = client.get("/api/v1/auth/me", cookies=cookie_b).json()
     id_b = me_b["id"]
     
-    # A tries to access A's profile - Allowed
-    res_aa = client.get(f"/api/v1/users/{id_a}/profile", cookies=cookie_a)
-    assert res_aa.status_code == 200
+    client.put("/api/v1/profile", json={"degree_course": "B.Tech"}, cookies=cookie_a)
+    client.put("/api/v1/profile", json={"degree_course": "B.A."}, cookies=cookie_b)
     
-    # A tries to access B's profile - Denied
-    res_ab = client.get(f"/api/v1/users/{id_b}/profile", cookies=cookie_a)
-    assert res_ab.status_code == 403
+    # A tries to access A's profile - Allowed
+    res_aa = client.get("/api/v1/profile", cookies=cookie_a)
+    assert res_aa.status_code == 200
+    assert res_aa.json()["degree_course"] == "B.Tech"
+    
+    # B tries to access B's profile - Allowed
+    res_bb = client.get("/api/v1/profile", cookies=cookie_b)
+    assert res_bb.status_code == 200
+    assert res_bb.json()["degree_course"] == "B.A."
     
     # Unauthenticated tries to access A's profile - Denied
     client.cookies.clear()
-    res_anon = client.get(f"/api/v1/users/{id_a}/profile")
+    res_anon = client.get("/api/v1/profile")
     assert res_anon.status_code == 401
