@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, Suspense } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { signIn } from "next-auth/react";
@@ -15,6 +15,28 @@ function LoginForm() {
   const searchParams = useSearchParams();
   const next = searchParams.get("next") || "/dashboard";
   const { refreshAuth } = useAuth();
+
+  useEffect(() => {
+    if (!process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID && process.env.NODE_ENV === "production") {
+      console.error(
+        "[EduGuide AI Auth] NEXT_PUBLIC_GOOGLE_CLIENT_ID is undefined in production environment variables. Google OAuth may fail unless configured in Vercel."
+      );
+    }
+  }, []);
+
+  const handleGoogleSignIn = async () => {
+    const clientId = process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID;
+    if (!clientId && process.env.NODE_ENV === "production") {
+      console.error(
+        "[EduGuide AI Auth] Missing NEXT_PUBLIC_GOOGLE_CLIENT_ID in production environment variables. Please add it to your Vercel Project Settings."
+      );
+    }
+    try {
+      await signIn("google", { callbackUrl: "/dashboard" });
+    } catch (err) {
+      console.error("[EduGuide AI Auth] Error triggering Google Sign-In:", err);
+    }
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -87,7 +109,7 @@ function LoginForm() {
 
         <button
           type="button"
-          onClick={() => signIn("google", { callbackUrl: "/dashboard" })}
+          onClick={handleGoogleSignIn}
           className="w-full flex items-center justify-center gap-3 py-2.5 px-4 bg-white border border-gray-300 rounded-full hover:bg-gray-50 transition-colors shadow-sm text-sm font-medium text-gray-700"
         >
           <svg className="w-5 h-5" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
