@@ -1,8 +1,13 @@
+"use client";
 import * as React from "react";
 import Link from "next/link";
 import { Header } from "@/components/layout/header";
+import { useAuth } from "@/lib/auth-context";
 
 export default function ScholarshipsPage() {
+  const { user } = useAuth();
+  const userName = user?.name ? user.name.split(" ")[0] : "Aarav";
+
   return (
     <>
       <Header />
@@ -361,14 +366,14 @@ export default function ScholarshipsPage() {
 </div>
 </div>
 <div className="flex items-center gap-space-xs">
-<button className="h-10 px-space-md rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-lg text-label-lg transition-colors flex items-center gap-1.5">
+<button onClick={() => alert("Coming soon: Save")} className="h-10 px-space-md rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-lg text-label-lg transition-colors flex items-center gap-1.5">
 <span className="material-symbols-outlined text-body-md">bookmark_border</span>
 <span>Save</span>
 </button>
-<button className="h-10 px-space-lg rounded-lg bg-primary-container text-on-primary font-label-lg text-label-lg hover:bg-primary transition-colors flex items-center gap-1.5 shadow-sm">
+<Link href="/scholarships/reliance-foundation-ug" className="h-10 px-space-lg rounded-lg bg-primary-container text-on-primary font-label-lg text-label-lg hover:bg-primary transition-colors flex items-center gap-1.5 shadow-sm">
 <span>Check Full Eligibility &amp; Apply</span>
 <span className="material-symbols-outlined text-body-md">arrow_forward</span>
-</button>
+</Link>
 </div>
 </div>
 </article>
@@ -428,11 +433,11 @@ export default function ScholarshipsPage() {
 </div>
 </div>
 <div className="flex items-center gap-space-xs">
-<button className="h-10 px-space-md rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-lg text-label-lg transition-colors flex items-center gap-1.5">
+<button onClick={() => alert("Coming soon: Save")} className="h-10 px-space-md rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-lg text-label-lg transition-colors flex items-center gap-1.5">
 <span className="material-symbols-outlined text-body-md">bookmark_border</span>
 <span>Save</span>
 </button>
-<button className="h-10 px-space-lg rounded-lg bg-primary-container text-on-primary font-label-lg text-label-lg hover:bg-primary transition-colors flex items-center gap-1.5 shadow-sm">
+<button onClick={() => alert("Coming soon: Apply")} className="h-10 px-space-lg rounded-lg bg-primary-container text-on-primary font-label-lg text-label-lg hover:bg-primary transition-colors flex items-center gap-1.5 shadow-sm">
 <span>View &amp; Apply</span>
 <span className="material-symbols-outlined text-body-md">arrow_forward</span>
 </button>
@@ -494,11 +499,11 @@ export default function ScholarshipsPage() {
 </div>
 </div>
 <div className="flex items-center gap-space-xs">
-<button className="h-10 px-space-md rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-lg text-label-lg transition-colors flex items-center gap-1.5">
+<button onClick={() => alert("Coming soon: Save")} className="h-10 px-space-md rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-lg text-label-lg transition-colors flex items-center gap-1.5">
 <span className="material-symbols-outlined text-body-md">bookmark_border</span>
 <span>Save</span>
 </button>
-<button className="h-10 px-space-lg rounded-lg bg-primary-container text-on-primary font-label-lg text-label-lg hover:bg-primary transition-colors flex items-center gap-1.5 shadow-sm">
+<button onClick={() => alert("Coming soon: Apply")} className="h-10 px-space-lg rounded-lg bg-primary-container text-on-primary font-label-lg text-label-lg hover:bg-primary transition-colors flex items-center gap-1.5 shadow-sm">
 <span>View &amp; Apply</span>
 <span className="material-symbols-outlined text-body-md">arrow_forward</span>
 </button>
@@ -541,7 +546,7 @@ export default function ScholarshipsPage() {
 <div className="flex flex-col">
 <span className="font-label-sm text-label-sm uppercase tracking-wider text-tertiary">Eligibility Criteria Mismatch</span>
 <span className="font-body-md text-body-md text-on-surface-variant">
-              This scheme exclusively funds <strong>Female applicants</strong> pursuing higher education in STEM disciplines. Aarav&apos;s verified profile gender is Male.
+              This scheme exclusively funds <strong>Female applicants</strong> pursuing higher education in STEM disciplines. {userName}&apos;s verified profile gender is Male.
             </span>
 </div>
 </div>
@@ -665,7 +670,7 @@ export default function ScholarshipsPage() {
 <span className="font-body-sm text-body-sm text-secondary">Ask EduGuide AI to run an instant eligibility audit</span>
 </div>
 </div>
-<button className="h-10 px-space-md rounded-full bg-secondary text-on-secondary font-label-lg text-label-lg hover:opacity-90 transition-opacity flex items-center gap-1 shadow-sm">
+<button onClick={() => alert("Coming soon: AI Check")} className="h-10 px-space-md rounded-full bg-secondary text-on-secondary font-label-lg text-label-lg hover:opacity-90 transition-opacity flex items-center gap-1 shadow-sm">
 <span>Start AI Check</span>
 <span className="material-symbols-outlined text-body-md">arrow_forward</span>
 </button>

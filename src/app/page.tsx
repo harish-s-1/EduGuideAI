@@ -1,8 +1,13 @@
+"use client";
 import * as React from "react";
 import Link from "next/link";
 import { Header } from "@/components/layout/header";
+import { useAuth } from "@/lib/auth-context";
 
 export default function LandingPage() {
+  const { user } = useAuth();
+  const userName = user?.name || "Aarav Sharma";
+
   return (
     <>
       <Header />
@@ -29,7 +34,7 @@ export default function LandingPage() {
           </p>
 
 <div className="flex flex-wrap items-center gap-space-sm pt-space-xs w-full sm:w-auto">
-<Link className="w-full sm:w-auto flex items-center justify-center gap-space-xs px-space-lg py-3 rounded-xl bg-primary text-on-primary font-label-lg text-label-lg shadow-md hover:bg-primary-container transition-all" href="/">
+<Link className="w-full sm:w-auto flex items-center justify-center gap-space-xs px-space-lg py-3 rounded-xl bg-primary text-on-primary font-label-lg text-label-lg shadow-md hover:bg-primary-container transition-all" href="/scholarships">
 <span className="material-symbols-outlined text-base">verified_user</span>
 <span>Explore Eligible Scholarships (Free)</span>
 </Link>
@@ -71,7 +76,7 @@ export default function LandingPage() {
 <img className="w-12 h-12 rounded-full object-cover" data-alt="A bright portrait of a young Indian male university engineering student in Bangalore, wearing glasses, smiling confidently against clean campus architectural background, natural daylight, photorealistic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9lGKMqzMrUZx1DEKEZn0Uv-eweVqzz5V3L_KD5UUw-kp5YQxhVMhGizBZBk96SZPdN_iAfjEj1ZKDQz_qPIvFXPQjPFmnUJlKFu4f1YBet7XnHaODRxuJ8in8ovawvhn7lyVAXxST0eoQSw5xPhxCc4xiaLs5LTRJAfE-3B7LW-FJYHcWi6bAHS0c2Il0gdC086uYFUrc6IOoC7e1Wr7UPbOV8Uue9W7LY11KTdFAm_tW3G2sSLsufg"/>
 <div>
 <div className="flex items-center gap-1.5">
-<span className="font-headline-sm text-headline-sm text-on-surface">Aarav Sharma</span>
+<span className="font-headline-sm text-headline-sm text-on-surface">{userName}</span>
 <span className="inline-block w-2 h-2 rounded-full bg-secondary"></span>
 </div>
 <p className="font-body-sm text-body-sm text-on-surface-variant">B.Tech CSE • 2nd Year • Pune Domicile</p>
@@ -137,7 +142,7 @@ export default function LandingPage() {
 <span className="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
 <span>NSP Server Status: Normal (Synced 4m ago)</span>
 </span>
-<span className="text-primary font-label-sm text-label-sm cursor-pointer hover:underline">View 14 other matches →</span>
+<Link href="/scholarships" className="text-primary font-label-sm text-label-sm cursor-pointer hover:underline">View 14 other matches →</Link>
 </div>
 </div>
 </div>
@@ -289,7 +294,7 @@ export default function LandingPage() {
 <span className="material-symbols-outlined text-xs">security</span>
             National Scholarship Portal (NSP 2.0)
           </span>
-<Link href="/scholarships/reliance-foundation" className="px-space-md py-2 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg hover:bg-primary-container transition-colors">
+<Link href="/scholarships/reliance-foundation-ug" className="px-space-md py-2 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg hover:bg-primary-container transition-colors">
             Check Instant Match
           </Link>
 </div>
@@ -339,7 +344,7 @@ export default function LandingPage() {
 <span className="material-symbols-outlined text-xs">lock</span>
             Direct Reliance CSR Portal
           </span>
-<Link href="/scholarships/reliance-foundation" className="px-space-md py-2 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg hover:bg-primary-container transition-colors">
+<Link href="/scholarships/reliance-foundation-ug" className="px-space-md py-2 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg hover:bg-primary-container transition-colors">
             Check Instant Match
           </Link>
 </div>
@@ -389,7 +394,7 @@ export default function LandingPage() {
 <span className="material-symbols-outlined text-xs">public</span>
             ongcscholar.org Official
           </span>
-<Link href="/scholarships/reliance-foundation" className="px-space-md py-2 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg hover:bg-primary-container transition-colors">
+<Link href="/scholarships/reliance-foundation-ug" className="px-space-md py-2 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg hover:bg-primary-container transition-colors">
             Check Instant Match
           </Link>
 </div>
@@ -439,7 +444,7 @@ export default function LandingPage() {
 <span className="material-symbols-outlined text-xs">verified</span>
             NSP / AICTE Direct Gateway
           </span>
-<Link href="/scholarships/reliance-foundation" className="px-space-md py-2 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg hover:bg-primary-container transition-colors">
+<Link href="/scholarships/reliance-foundation-ug" className="px-space-md py-2 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg hover:bg-primary-container transition-colors">
             Check Instant Match
           </Link>
 </div>

@@ -1,8 +1,13 @@
+"use client";
 import * as React from "react";
 import Link from "next/link";
 import { Header } from "@/components/layout/header";
+import { useAuth } from "@/lib/auth-context";
 
 export default function DashboardPage() {
+  const { user } = useAuth();
+  const firstName = user?.name ? user.name.split(" ")[0] : "Student";
+
   return (
     <>
       <Header />
@@ -23,7 +28,7 @@ export default function DashboardPage() {
           </span>
 </div>
 <h1 className="font-headline-lg text-headline-lg text-on-surface tracking-tight">
-          Welcome back, Aarav! <span className="text-primary font-headline-lg text-headline-lg">3 new high-match scholarships</span> added this week.
+          Welcome back, {firstName}! <span className="text-primary font-headline-lg text-headline-lg">3 new high-match scholarships</span> added this week.
         </h1>
 <p className="font-body-md text-body-md text-on-surface-variant mt-2 leading-relaxed">
           AI algorithmic scan updated 2 hours ago against National Scholarship Portal (NSP), MahaDBT, and 12 premier corporate CSR trusts.
@@ -55,11 +60,11 @@ export default function DashboardPage() {
 </div>
 </div>
 <div className="flex flex-col gap-2.5 w-full sm:w-auto">
-<button className="flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg shadow-sm hover:bg-primary-container transition-all" id="runScanBtn">
+<button onClick={() => alert("Coming soon: AI Eligibility Scan")} className="flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg shadow-sm hover:bg-primary-container transition-all" id="runScanBtn">
 <span className="material-symbols-outlined text-body-lg">radar</span>
 <span>Run AI Eligibility Scan</span>
 </button>
-<button className="flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-surface-container-high text-on-surface font-label-lg text-label-lg hover:bg-surface-variant transition-colors">
+<button onClick={() => alert("Coming soon: AI Advisor")} className="flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-surface-container-high text-on-surface font-label-lg text-label-lg hover:bg-surface-variant transition-colors">
 <span className="material-symbols-outlined text-secondary text-body-lg">auto_awesome</span>
 <span>Ask AI Advisor</span>
 </button>
@@ -144,7 +149,7 @@ export default function DashboardPage() {
 <h2 className="font-headline-sm text-headline-sm text-on-surface">Critical Deadlines Watchlist</h2>
 <span className="px-2 py-0.5 rounded-full bg-tertiary-fixed-dim/40 text-on-tertiary-fixed font-label-sm text-label-sm">Action Needed</span>
 </div>
-<button className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-sm text-label-sm transition-colors">
+<button onClick={() => alert("Coming soon: Calendar Sync")} className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-sm text-label-sm transition-colors">
 <span className="material-symbols-outlined text-body-sm">calendar_month</span>
 <span>Sync with Calendar</span>
 </button>
@@ -175,7 +180,7 @@ export default function DashboardPage() {
 </div>
 </div>
 <div className="flex items-center gap-2 self-end sm:self-center shrink-0">
-<button className="px-3 py-1.5 rounded-lg bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-colors">
+<button onClick={() => alert("Coming soon: Application Form")} className="px-3 py-1.5 rounded-lg bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-colors">
             Resume Form
           </button>
 </div>
@@ -205,7 +210,7 @@ export default function DashboardPage() {
 </div>
 </div>
 <div className="flex items-center gap-2 self-end sm:self-center shrink-0">
-<button className="px-3 py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-md text-label-md transition-colors">
+<button onClick={() => alert("Coming soon: Review Docs")} className="px-3 py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-md text-label-md transition-colors">
             Review Docs
           </button>
 </div>
@@ -218,7 +223,7 @@ export default function DashboardPage() {
 <div className="lg:col-span-8 flex flex-col gap-6">
 <div className="flex items-center justify-between">
 <div>
-<h2 className="font-headline-md text-headline-md text-on-surface tracking-tight">Top Matched Scholarships for Aarav</h2>
+<h2 className="font-headline-md text-headline-md text-on-surface tracking-tight">Top Matched Scholarships for {firstName}</h2>
 <p className="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Ranked using your academic transcript, demographic parameters, and verified state quotas.</p>
 </div>
 <span className="font-label-sm text-label-sm text-secondary bg-secondary-container/40 px-3 py-1 rounded-full font-semibold">
@@ -283,13 +288,13 @@ export default function DashboardPage() {
 <span>Deadline: Nov 20, 2024 (24 days left)</span>
 </div>
 <div className="flex items-center gap-2">
-<button className="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container transition-colors" title="Bookmark Scheme">
+<button onClick={() => alert("Coming soon: Bookmark")} className="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container transition-colors" title="Bookmark Scheme">
 <span className="material-symbols-outlined text-body-lg">bookmark_border</span>
 </button>
-<button className="px-4 py-2 rounded-lg bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-md text-label-md transition-colors">
+<Link href="/scholarships/reliance-foundation-ug" className="px-4 py-2 rounded-lg bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-md text-label-md transition-colors">
               View Details
-            </button>
-<button className="flex items-center gap-1.5 px-4 py-2 rounded-lg bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-colors shadow-sm">
+            </Link>
+<button onClick={() => alert("Coming soon: AI Copilot")} className="flex items-center gap-1.5 px-4 py-2 rounded-lg bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-colors shadow-sm">
 <span className="material-symbols-outlined text-label-md">smart_toy</span>
 <span>Apply via AI Copilot</span>
 </button>
@@ -352,13 +357,13 @@ export default function DashboardPage() {
 <span>Pre-filled with MahaDBT ID: MH-2022-8921</span>
 </div>
 <div className="flex items-center gap-2">
-<button className="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container transition-colors" title="Bookmark Scheme">
+<button onClick={() => alert("Coming soon: Bookmark")} className="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container transition-colors" title="Bookmark Scheme">
 <span className="material-symbols-outlined text-body-lg">bookmark_border</span>
 </button>
-<button className="px-4 py-2 rounded-lg bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-md text-label-md transition-colors">
+<Link href="/scholarships/reliance-foundation-ug" className="px-4 py-2 rounded-lg bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-md text-label-md transition-colors">
               Guidelines
-            </button>
-<button className="flex items-center gap-1.5 px-4 py-2 rounded-lg bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-colors shadow-sm">
+            </Link>
+<button onClick={() => alert("Coming soon: Sync & Apply")} className="flex items-center gap-1.5 px-4 py-2 rounded-lg bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-colors shadow-sm">
 <span className="material-symbols-outlined text-label-md">open_in_new</span>
 <span>Sync &amp; Apply</span>
 </button>
@@ -420,13 +425,13 @@ export default function DashboardPage() {
 <span>Deadline: Dec 10, 2024</span>
 </div>
 <div className="flex items-center gap-2">
-<button className="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container transition-colors" title="Bookmark Scheme">
+<button onClick={() => alert("Coming soon: Bookmark")} className="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container transition-colors" title="Bookmark Scheme">
 <span className="material-symbols-outlined text-body-lg">bookmark_border</span>
 </button>
-<button className="px-4 py-2 rounded-lg bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-md text-label-md transition-colors">
+<Link href="/scholarships/reliance-foundation-ug" className="px-4 py-2 rounded-lg bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-md text-label-md transition-colors">
               Review Guidelines
-            </button>
-<button className="flex items-center gap-1.5 px-4 py-2 rounded-lg bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-colors shadow-sm">
+            </Link>
+<button onClick={() => alert("Coming soon: Start Application")} className="flex items-center gap-1.5 px-4 py-2 rounded-lg bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-colors shadow-sm">
 <span>Start Application</span>
 </button>
 </div>
@@ -526,7 +531,7 @@ export default function DashboardPage() {
           &quot;As a third-year Computer Science student passionate about accessible healthcare diagnostics through computer vision...&quot;
         </div>
 <div className="flex items-center gap-2 pt-1">
-<button className="w-full py-2 rounded-lg bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-colors flex items-center justify-center gap-1">
+<button onClick={() => alert("Coming soon: AI Workspace")} className="w-full py-2 rounded-lg bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-colors flex items-center justify-center gap-1">
 <span className="material-symbols-outlined text-label-md">auto_awesome</span>
 <span>Open in AI Workspace</span>
 </button>

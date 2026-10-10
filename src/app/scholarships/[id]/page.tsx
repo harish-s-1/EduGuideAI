@@ -1,8 +1,13 @@
+"use client";
 import * as React from "react";
 import Link from "next/link";
 import { Header } from "@/components/layout/header";
+import { useAuth } from "@/lib/auth-context";
 
 export default function ScholarshipDetail() {
+  const { user } = useAuth();
+  const userName = user?.name || "Aarav Sharma";
+  
   return (
     <>
       <Header />
@@ -78,7 +83,7 @@ export default function ScholarshipDetail() {
 <span className="font-label-sm text-label-sm uppercase text-secondary font-bold flex items-center gap-1">
 <span className="material-symbols-outlined text-label-sm">auto_awesome</span> High Fit Rating
             </span>
-<span className="font-label-lg text-label-lg text-on-surface">Aarav Sharma</span>
+<span className="font-label-lg text-label-lg text-on-surface">{userName}</span>
 <span className="font-body-sm text-body-sm text-on-surface-variant">5/5 Core Criteria Met</span>
 </div>
 </div>
@@ -133,14 +138,14 @@ export default function ScholarshipDetail() {
 </Link>
 </div>
 <div className="flex items-center gap-space-xs">
-<button className="flex items-center gap-space-xs px-space-sm py-2 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-colors" id="saveBtn">
+<button onClick={() => alert("Coming soon: Save")} className="flex items-center gap-space-xs px-space-sm py-2 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-colors" id="saveBtn">
 <span className="material-symbols-outlined text-body-md text-on-surface-variant" id="bookmarkIcon">bookmark_border</span>
 <span id="saveText">Save to Tracker</span>
 </button>
-<button className="p-2 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" title="Share Scheme">
+<button onClick={() => alert("Coming soon: Share")} className="p-2 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" title="Share Scheme">
 <span className="material-symbols-outlined text-body-md">share</span>
 </button>
-<button className="p-2 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" title="Download Official PDF Guidelines">
+<button onClick={() => alert("Coming soon: Download")} className="p-2 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" title="Download Official PDF Guidelines">
 <span className="material-symbols-outlined text-body-md">download</span>
 </button>
 </div>
@@ -198,7 +203,7 @@ export default function ScholarshipDetail() {
 </div>
 <div className="flex items-center gap-space-sm pl-8 md:pl-0">
 <div className="flex flex-col md:items-end">
-<span className="font-label-md text-label-md text-on-surface">Aarav Sharma (Indian Citizen)</span>
+<span className="font-label-md text-label-md text-on-surface">{userName} (Indian Citizen)</span>
 <span className="font-body-sm text-body-sm text-secondary flex items-center gap-0.5">
 <span className="material-symbols-outlined text-label-sm">verified_user</span> Aadhaar Verified
                 </span>
@@ -271,7 +276,7 @@ export default function ScholarshipDetail() {
 <span className="font-label-md text-label-md text-tertiary font-bold">Action Pending</span>
 <span className="font-body-sm text-body-sm text-on-surface-variant">Practice module active</span>
 </div>
-<button className="px-2.5 py-1 rounded bg-tertiary text-on-tertiary font-label-sm text-label-sm font-bold hover:opacity-90">TAKE MOCK</button>
+<button onClick={() => alert("Coming soon: Mock Test")} className="px-2.5 py-1 rounded bg-tertiary text-on-tertiary font-label-sm text-label-sm font-bold hover:opacity-90">TAKE MOCK</button>
 </div>
 </div>
 </div>
@@ -281,7 +286,7 @@ export default function ScholarshipDetail() {
 <div className="flex flex-col">
 <span className="font-label-lg text-label-lg text-on-secondary-fixed">Recommendation Verdict: Optimal Fit</span>
 <span className="font-body-sm text-body-sm text-on-surface">
-              You meet 5 of 5 baseline qualifications. Aarav ranks within the top 8th percentile of eligible candidates in the Engineering category for this scheme.
+              You meet 5 of 5 baseline qualifications. {user?.name ? user.name.split(" ")[0] : "Aarav"} ranks within the top 8th percentile of eligible candidates in the Engineering category for this scheme.
             </span>
 </div>
 </div>
@@ -502,7 +507,7 @@ export default function ScholarshipDetail() {
 </div>
 </div>
 </div>
-<button className="w-full py-2.5 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-colors flex items-center justify-center gap-space-xs mt-space-xs">
+<button onClick={() => alert("Coming soon: DigiLocker Token")} className="w-full py-2.5 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-colors flex items-center justify-center gap-space-xs mt-space-xs">
 <span className="material-symbols-outlined text-body-md">lock</span>
 <span>Generate Unified DigiLocker Token</span>
 </button>

@@ -18,8 +18,8 @@ export function Header() {
         <>
           <Link className="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" href="/scholarships">Scholarships</Link>
           <Link className="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" href="/dashboard">Dashboard</Link>
-          <Link className="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" href="/applications">My Applications</Link>
-          <Link className="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" href="/deadlines">Deadlines</Link>
+          <button onClick={() => alert("Coming soon: My Applications")} className="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors">My Applications</button>
+          <button onClick={() => alert("Coming soon: Deadlines")} className="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors">Deadlines</button>
         </>
       )}
     </nav><div className="flex items-center gap-space-sm">
