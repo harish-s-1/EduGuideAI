@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"primary-fixed-dim":"#b4c5ff","on-secondary-fixed":"#00201d","tertiary-fixed":"#ffdcc3","tertiary-container":"#a65900","secondary-container":"#86f2e4","secondary":"#006a61","background":"#faf8ff","tertiary-fixed-dim":"#ffb77d","surface-variant":"#dae2fd","on-surface":"#131b2e","primary-container":"#2563eb","surface-bright":"#faf8ff","surface-container-high":"#e2e7ff","on-error-container":"#93000a","primary":"#004ac6","on-tertiary-fixed":"#2f1500","secondary-fixed-dim":"#6bd8cb","inverse-primary":"#b4c5ff","surface-dim":"#d2d9f4","on-secondary-container":"#006f66","outline":"#737686","error":"#ba1a1a","on-secondary":"#ffffff","on-tertiary":"#ffffff","surface-tint":"#0053db","surface-container-lowest":"#ffffff","on-tertiary-container":"#ffede1","on-primary-fixed-variant":"#003ea8","on-background":"#131b2e","surface-container":"#eaedff","secondary-fixed":"#89f5e7","tertiary":"#824500","on-primary-fixed":"#00174b","on-primary-container":"#eeefff","primary-fixed":"#dbe1ff","on-error":"#ffffff","inverse-on-surface":"#eef0ff","surface":"#faf8ff","on-secondary-fixed-variant":"#005049","on-tertiary-fixed-variant":"#6e3900","on-primary":"#ffffff","outline-variant":"#c3c6d7","on-surface-variant":"#434655","surface-container-low":"#f2f3ff","error-container":"#ffdad6","inverse-surface":"#283044","surface-container-highest":"#dae2fd"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"margin-mobile":"1rem","space-sm":"0.5rem","space-xl":"2rem",gutter:"1.5rem","space-lg":"1.5rem","gutter-mobile":"1rem","space-xs":"0.25rem","space-md":"1rem",margin:"2rem"},fontFamily:{"label-lg":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"headline-xl-mobile":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"],"headline-xl":["Plus Jakarta Sans"]},fontSize:{"label-lg":["14px",{lineHeight:"20px",fontWeight:"600"}],"headline-sm":["16px",{lineHeight:"24px",fontWeight:"600"}],"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.03em",fontWeight:"700"}],"headline-lg":["28px",{lineHeight:"36px",letterSpacing:"-0.01em",fontWeight:"700"}],"body-lg":["16px",{lineHeight:"24px",fontWeight:"400"}],"body-md":["14px",{lineHeight:"20px",fontWeight:"400"}],"headline-lg-mobile":["24px",{lineHeight:"32px",letterSpacing:"-0.01em",fontWeight:"600"}],"headline-md":["20px",{lineHeight:"28px",letterSpacing:"-0.005em",fontWeight:"600"}],"headline-xl-mobile":["28px",{lineHeight:"36px",letterSpacing:"-0.01em",fontWeight:"700"}],"body-sm":["12px",{lineHeight:"18px",fontWeight:"400"}],"label-md":["12px",{lineHeight:"16px",letterSpacing:"0.01em",fontWeight:"600"}],"headline-xl":["36px",{lineHeight:"44px",letterSpacing:"-0.02em",fontWeight:"700"}]}}}};</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between py-space-md"><div class="flex flex-col gap-space-lg px-space-md"><div class="flex items-center gap-space-sm px-space-xs"><img alt="EduGuide AI Brand Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UjyASGGziD6DN--_U882UUEORghn4oMVDfgauU3oqObjXJhI8P_vtiNO_DCHSkSfgfBESEyX2zQME21wIf3IxOnStKL9LaOZ0jk_rXvzK__PurxUHqvpd15VhA34SGLU81AghlADC0nvIVgHOFWTrtFQyo-4ieVZJJEBR2yHbUesRb0cwhfg2qXmt4FZpXd6B9poY0H8UgfagOtlwOWeHMASa62dw_dWNJd_Pzp_VPtNVWVfpIQCr3Jmlw"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface">EduGuide AI</span><span class="font-label-sm text-label-sm text-secondary uppercase">National Portal</span></div></div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-label-lg rounded-lg"><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm transition-colors bg-primary-container text-on-primary-container font-label-lg rounded-lg" data-path="dashboard" href="#"><span class="material-symbols-outlined text-body-lg">grid_view</span><span>Dashboard</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="scholarship-discovery" href="#"><span class="material-symbols-outlined text-body-lg">school</span><span>Scholarship Discovery</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="ai-advisor-workspace" href="#"><span class="material-symbols-outlined text-body-lg">auto_awesome</span><span>AI Advisor &amp; Workspace</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="applications-tracker" href="#"><span class="material-symbols-outlined text-body-lg">assignment</span><span>Applications Tracker</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="student-profile" href="#"><span class="material-symbols-outlined text-body-lg">person</span><span>Student Profile</span></a></nav></div><div class="flex flex-col gap-space-sm px-space-md"><div class="p-space-sm bg-surface-container rounded-lg flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-secondary text-body-md">verified</span><span class="font-label-sm text-label-sm text-on-surface">Aadhaar &amp; DigiLocker</span></div><span class="font-label-sm text-label-sm text-secondary bg-surface-container-lowest px-space-xs py-0.5 rounded">Verified</span></div><div class="flex items-center justify-between px-space-xs pt-space-xs"><span class="font-label-sm text-label-sm text-on-surface-variant">v2.4 Academic Rel.</span><span class="font-label-sm text-label-sm text-on-surface-variant">NSP Compatible</span></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-gutter"><div class="flex items-center gap-space-md w-full max-w-xl"><div class="relative w-full"><span class="material-symbols-outlined absolute left-space-sm top-1/2 -translate-y-1/2 text-on-surface-variant text-body-md">search</span><input class="w-full h-10 pl-10 pr- space-md bg-surface-container-lowest rounded-xl font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant focus:outline-none shadow-[0_1px_3px_rgba(15,23,42,0.05)]" placeholder="Search 2,400+ scholarships across India, state schemes, NSP..." type="text"/><kbd class="absolute right-space-sm top-1/2 -translate-y-1/2 px-space-xs py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">⌘K</kbd></div></div><div class="flex items-center gap-space-lg"><div class="relative flex items-center justify-center p-space-xs text-on-surface-variant hover:text-on-surface cursor-pointer rounded-full transition-colors" title="3 deadlines approaching"><span class="material-symbols-outlined text-headline-sm">notifications</span><span class="absolute top-1 right-1 flex h-4 w-4 items-center justify-center rounded-full bg-tertiary font-label-sm text-label-sm text-on-tertiary">3</span></div><div class="flex items-center gap-space-sm pl-space-sm"><div class="relative"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAY0XRM1bh36KLFtPP3CsKp5a-xSdubKeWzBBx7ge3djon55LP0pgCZ4JVrOrkP9VRDmLgFRbd4ZTasbWgHHWiIYjQYpv5vFY3TeUaguN_PXHkrxBdWqpSPoiIIeRDT3w61RKNHaPsFZcFD_pyr7jm-GoU8ZUGXk6jKGpJ4XfeU3Ezma7IhMOi2UxhpBmfnYMGq6IgQV2Uxj18pRfe5UCUCWB3WKsrc_FQs30s9n-Zzm4GfYMnrx0tyLQ"/><span class="absolute bottom-0 right-0 h-2.5 w-2.5 rounded-full bg-secondary"></span></div><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-label-lg text-label-lg text-on-surface">Aarav Sharma</span><span class="material-symbols-outlined text-secondary text-label-md" title="Eligibility Verified">verified_user</span></div><span class="font-body-sm text-body-sm text-on-surface-variant">B.Tech CSE • 3rd Year</span></div></div></div></header><main class="relative w-full pt-16 bg-surface px-gutter"><div class="flex flex-col w-full pb-16 space-y-8">
+<!-- Top Welcome & Action Banner -->
+<section class="relative overflow-hidden rounded-2xl bg-surface-container-low p-6 lg:p-8 shadow-sm">
+<div class="absolute -right-16 -top-16 w-80 h-80 rounded-full bg-primary/5 blur-3xl pointer-events-none"></div>
+<div class="absolute right-32 bottom-0 w-64 h-64 rounded-full bg-secondary/5 blur-2xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col xl:flex-row xl:items-center justify-between gap-6">
+<div class="flex flex-col max-w-2xl">
+<div class="flex items-center gap-2 mb-2">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-secondary-container/40 text-on-secondary-container font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+            Profile Verified • Maharashtra Domicile
+          </span>
+<span class="px-2 py-0.5 rounded font-label-sm text-label-sm text-outline uppercase bg-surface-container font-bold">
+            DEMO DATA - Verified Guidelines
+          </span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+          Welcome back, Aarav! <span class="text-primary font-headline-lg text-headline-lg">3 new high-match scholarships</span> added this week.
+        </h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2 leading-relaxed">
+          AI algorithmic scan updated 2 hours ago against National Scholarship Portal (NSP), MahaDBT, and 12 premier corporate CSR trusts.
+        </p>
+<!-- Quick AI Readiness Pill -->
+<div class="flex flex-wrap items-center gap-3 mt-4 pt-3 border-t border-surface-container">
+<div class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container-lowest shadow-sm">
+<span class="material-symbols-outlined text-secondary text-body-lg">verified</span>
+<span class="font-label-md text-label-md text-on-surface">Profile 94% Complete</span>
+<span class="text-on-surface-variant font-body-sm text-body-sm">• High Eligibility Confidence</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-label-md">account_balance</span>
+<span>B.Tech CSE (3rd Yr) • Tier-1 Engg</span>
+</div>
+</div>
+</div>
+<!-- Action Panel & Circular Gauge -->
+<div class="flex flex-col sm:flex-row items-center gap-4 bg-surface-container-lowest p-5 rounded-xl shadow-sm border border-surface-container-high/60">
+<div class="relative flex items-center justify-center w-24 h-24">
+<!-- Circular Progress Ring (94%) -->
+<svg class="w-24 h-24 transform -rotate-90" viewbox="0 0 100 100">
+<circle class="text-surface-container" cx="50" cy="50" fill="transparent" r="40" stroke="currentColor" stroke-width="8"></circle>
+<circle class="text-secondary transition-all duration-1000 ease-out" cx="50" cy="50" fill="transparent" r="40" stroke="currentColor" stroke-dasharray="251.2" stroke-dashoffset="15" stroke-linecap="round" stroke-width="8"></circle>
+</svg>
+<div class="absolute flex flex-col items-center">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">94%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Ready</span>
+</div>
+</div>
+<div class="flex flex-col gap-2.5 w-full sm:w-auto">
+<button class="flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg shadow-sm hover:bg-primary-container transition-all" id="runScanBtn">
+<span class="material-symbols-outlined text-body-lg">radar</span>
+<span>Run AI Eligibility Scan</span>
+</button>
+<button class="flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-surface-container-high text-on-surface font-label-lg text-label-lg hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined text-secondary text-body-lg">auto_awesome</span>
+<span>Ask AI Advisor</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Key Metric Stat Cards -->
+<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+<!-- Stat 1 -->
+<div class="flex flex-col p-5 rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant">High Matches Found</span>
+<div class="p-2 rounded-lg bg-secondary-container/30 text-on-secondary-container">
+<span class="material-symbols-outlined text-headline-sm">workspace_premium</span>
+</div>
+</div>
+<div class="mt-3 flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg text-on-surface">14 Schemes</span>
+</div>
+<div class="mt-1 flex items-center justify-between">
+<span class="font-label-md text-label-md text-secondary font-semibold">₹3,40,000 Potential</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Avg ₹24.2k/ea</span>
+</div>
+</div>
+<!-- Stat 2 -->
+<div class="flex flex-col p-5 rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant">Active Applications</span>
+<div class="p-2 rounded-lg bg-primary-fixed text-on-primary-fixed">
+<span class="material-symbols-outlined text-headline-sm">pending_actions</span>
+</div>
+</div>
+<div class="mt-3 flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg text-on-surface">3 In Progress</span>
+</div>
+<div class="mt-1 flex items-center gap-1.5 font-label-sm text-label-sm text-on-surface-variant">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span>1 Submitted • 2 Drafting</span>
+</div>
+</div>
+<!-- Stat 3 -->
+<div class="flex flex-col p-5 rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant">Urgent Deadlines</span>
+<div class="p-2 rounded-lg bg-tertiary-fixed text-on-tertiary-fixed">
+<span class="material-symbols-outlined text-headline-sm">timer</span>
+</div>
+</div>
+<div class="mt-3 flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg text-tertiary">2 Closing Soon</span>
+</div>
+<div class="mt-1 flex items-center gap-1 font-label-sm text-label-sm text-tertiary font-semibold">
+<span class="material-symbols-outlined text-label-sm">warning</span>
+<span>Action required in &lt;10 Days</span>
+</div>
+</div>
+<!-- Stat 4 -->
+<div class="flex flex-col p-5 rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant">DigiLocker Verification</span>
+<div class="p-2 rounded-lg bg-surface-container-high text-on-surface">
+<span class="material-symbols-outlined text-headline-sm">task_alt</span>
+</div>
+</div>
+<div class="mt-3 flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg text-on-surface">8/10 Ready</span>
+</div>
+<div class="mt-1 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary font-semibold">e-KYC Synced</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">2 Missing Docs</span>
+</div>
+</div>
+</section>
+<!-- Urgent Deadlines Watchlist -->
+<section class="flex flex-col gap-4">
+<div class="flex flex-wrap items-center justify-between gap-2">
+<div class="flex items-center gap-2">
+<div class="p-1 rounded bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-body-md">alarm</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Critical Deadlines Watchlist</h2>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed-dim/40 text-on-tertiary-fixed font-label-sm text-label-sm">Action Needed</span>
+</div>
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-sm text-label-sm transition-colors">
+<span class="material-symbols-outlined text-body-sm">calendar_month</span>
+<span>Sync with Calendar</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Urgent Card 1 -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between p-4 rounded-xl bg-surface-container-lowest shadow-sm gap-4 border-l-4 border-l-tertiary">
+<div class="flex items-start gap-3">
+<div class="p-2 rounded-lg bg-tertiary-fixed/60 text-on-tertiary-fixed shrink-0">
+<span class="material-symbols-outlined text-headline-sm">account_balance</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface">Central Sector Scheme (NSP)</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">MoE Govt of India</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              Ministry of Education • College &amp; University Students Merit Scheme
+            </p>
+<div class="flex items-center gap-3 mt-2">
+<span class="font-label-sm text-label-sm text-tertiary bg-tertiary-fixed/40 px-2 py-0.5 rounded font-bold">
+                Closes Oct 31 • 5 days left
+              </span>
+<span class="font-label-sm text-label-sm text-error bg-error-container/50 px-2 py-0.5 rounded">
+                Draft SOP Pending
+              </span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2 self-end sm:self-center shrink-0">
+<button class="px-3 py-1.5 rounded-lg bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-colors">
+            Resume Form
+          </button>
+</div>
+</div>
+<!-- Urgent Card 2 -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between p-4 rounded-xl bg-surface-container-lowest shadow-sm gap-4 border-l-4 border-l-tertiary">
+<div class="flex items-start gap-3">
+<div class="p-2 rounded-lg bg-tertiary-fixed/60 text-on-tertiary-fixed shrink-0">
+<span class="material-symbols-outlined text-headline-sm">foundation</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface">Tata Trust Engg Grant 2024-25</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Private CSR</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              Merit-cum-Means Grant for Undergraduate Engineering Scholars
+            </p>
+<div class="flex items-center gap-3 mt-2">
+<span class="font-label-sm text-label-sm text-tertiary bg-tertiary-fixed/40 px-2 py-0.5 rounded font-bold">
+                Closes Nov 08 • 12 days left
+              </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container px-2 py-0.5 rounded">
+                Documents Needed (2)
+              </span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2 self-end sm:self-center shrink-0">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-md text-label-md transition-colors">
+            Review Docs
+          </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Grid: Top Recommended Schemes & AI Right Sidebar -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Left Column: Scholarship Cards (8 Cols) -->
+<div class="lg:col-span-8 flex flex-col gap-6">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight">Top Matched Scholarships for Aarav</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Ranked using your academic transcript, demographic parameters, and verified state quotas.</p>
+</div>
+<span class="font-label-sm text-label-sm text-secondary bg-secondary-container/40 px-3 py-1 rounded-full font-semibold">
+          AI Filtered (14 of 2,400)
+        </span>
+</div>
+<!-- Card 1: HDFC Badhte Kadam -->
+<article class="flex flex-col p-6 rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow relative">
+<div class="flex items-start justify-between gap-4">
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center shrink-0 shadow-sm overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Emblem logo of premier Indian philanthropic organization with deep navy and clean geometric emblem" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-mQaFDmB7h86iPnca2Hy-QS4-XXlr8ITTlL_MK8WKGHQbFiSLttdb2-XkHfi2TEYAFyVR9kMFAvMneEKGfLsfyI7aCksTBcbjP5AFZ4SgzK5CP0XD4SoUfd3M9JK9NpZPTCUHBKcGkrIuvQaoWKqPFMvlewiveev3PWpLeohDRNgRzfttkG3oJGhQNaBOBi2g47O56-soGlrpppm0aSKKxtEoS4kcCUQ72FjaIXRu406wA1jHpVIBcg"/>
+</div>
+<div>
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-2 py-0.5 rounded-md font-label-sm text-label-sm text-on-surface-variant bg-surface-container uppercase">CSR Philanthropy</span>
+<span class="font-label-sm text-label-sm text-outline">• Vidyasaarathi Portal</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1">HDFC Badhte Kadam Scholarship 2025</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">General &amp; STEM Undergraduate Cohort</p>
+</div>
+</div>
+<!-- Eligibility Pill -->
+<div class="flex flex-col items-end shrink-0">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-md text-label-md font-bold">
+<span class="material-symbols-outlined text-body-sm">check_circle</span>
+              96% Match
+            </span>
+</div>
+</div>
+<!-- Award & Metric Details -->
+<div class="flex flex-wrap items-baseline gap-6 mt-4 pt-4 border-t border-surface-container">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Grant Award</span>
+<div class="font-headline-md text-headline-md font-bold text-on-surface mt-0.5">₹1,00,000 <span class="font-body-sm text-body-sm text-on-surface-variant font-normal">/ year</span></div>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Application Mode</span>
+<div class="font-body-md text-body-md text-on-surface font-semibold mt-0.5">Direct Bank DBT</div>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Disbursal Date</span>
+<div class="font-body-md text-body-md text-on-surface font-semibold mt-0.5">Dec 15, 2024</div>
+</div>
+</div>
+<!-- Explainable AI Box -->
+<div class="mt-4 p-3.5 rounded-xl bg-secondary-container/20 flex flex-col gap-1.5">
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-secondary font-bold">
+<span class="material-symbols-outlined text-label-md">auto_awesome</span>
+<span>Matched because:</span>
+</div>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2.5 py-0.5 rounded-md bg-surface-container-lowest font-body-sm text-body-sm text-on-surface shadow-2xs">Engineering UG (Year 3)</span>
+<span class="px-2.5 py-0.5 rounded-md bg-surface-container-lowest font-body-sm text-body-sm text-on-surface shadow-2xs">Class 12 Merit &gt; 85% (Recorded: 91.4%)</span>
+<span class="px-2.5 py-0.5 rounded-md bg-surface-container-lowest font-body-sm text-body-sm text-on-surface shadow-2xs">Family Income &lt; ₹6 LPA (Recorded: ₹4.8 LPA)</span>
+</div>
+</div>
+<!-- Footer Action -->
+<div class="flex items-center justify-between mt-5 pt-3">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-body-sm text-tertiary">schedule</span>
+<span>Deadline: Nov 20, 2024 (24 days left)</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container transition-colors" title="Bookmark Scheme">
+<span class="material-symbols-outlined text-body-lg">bookmark_border</span>
+</button>
+<button class="px-4 py-2 rounded-lg bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-md text-label-md transition-colors">
+              View Details
+            </button>
+<button class="flex items-center gap-1.5 px-4 py-2 rounded-lg bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-colors shadow-sm">
+<span class="material-symbols-outlined text-label-md">smart_toy</span>
+<span>Apply via AI Copilot</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Card 2: MahaDBT Rajarshi Chhatrapati Shahu Maharaj -->
+<article class="flex flex-col p-6 rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow relative">
+<div class="flex items-start justify-between gap-4">
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center shrink-0 shadow-sm overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Official seal of Maharashtra State Higher and Technical Education Department in crisp gold and deep navy heraldry" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAm4S_plWukMR8ns5f1S9aOO5Z2bEkAcSovdb8fUEh9heXVjraf9udWCnU-eywQgnmphfql0EaJi4f3ZGb2PiLrp-y4cSLnAb5j3mEP80DC_IjdIIO80rVgtPZlCVrmtCDJgy_GJXKQnub_5PXp1sQzcRuQam-81e9NdUGaKeojS6osSzD5Kh-MpXIiaINMgK8CLAQqlU5iWRQOnjWA35P2w7HU5_FSkG0gQilMN9qnNJI98ULoWKdGiw"/>
+</div>
+<div>
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-2 py-0.5 rounded-md font-label-sm text-label-sm text-secondary bg-secondary-container/40 uppercase font-semibold">State Government Scheme</span>
+<span class="font-label-sm text-label-sm text-outline">• MahaDBT Portal</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1">Rajarshi Chhatrapati Shahu Maharaj Shikshan Shulk (EBC)</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Directorate of Technical Education (DTE Maharashtra)</p>
+</div>
+</div>
+<!-- Eligibility Pill -->
+<div class="flex flex-col items-end shrink-0">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-md text-label-md font-bold">
+<span class="material-symbols-outlined text-body-sm">verified</span>
+              99% Match
+            </span>
+</div>
+</div>
+<div class="flex flex-wrap items-baseline gap-6 mt-4 pt-4 border-t border-surface-container">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Benefit Amount</span>
+<div class="font-headline-md text-headline-md font-bold text-on-surface mt-0.5">50% Tuition Waiver <span class="font-body-sm text-body-sm text-on-surface-variant font-normal">(~₹75,000/yr)</span></div>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Quota Category</span>
+<div class="font-body-md text-body-md text-on-surface font-semibold mt-0.5">Open / EBC General</div>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Disbursal Mode</span>
+<div class="font-body-md text-body-md text-on-surface font-semibold mt-0.5">Direct to College Bank A/C</div>
+</div>
+</div>
+<!-- Explainable AI Box -->
+<div class="mt-4 p-3.5 rounded-xl bg-secondary-container/20 flex flex-col gap-1.5">
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-secondary font-bold">
+<span class="material-symbols-outlined text-label-md">auto_awesome</span>
+<span>Matched because:</span>
+</div>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2.5 py-0.5 rounded-md bg-surface-container-lowest font-body-sm text-body-sm text-on-surface shadow-2xs">Maharashtra Domicile (Verified via DigiLocker)</span>
+<span class="px-2.5 py-0.5 rounded-md bg-surface-container-lowest font-body-sm text-body-sm text-on-surface shadow-2xs">Admitted via CAP Round 1</span>
+<span class="px-2.5 py-0.5 rounded-md bg-surface-container-lowest font-body-sm text-body-sm text-on-surface shadow-2xs">Family Income ≤ ₹8,00,000 bracket</span>
+</div>
+</div>
+<div class="flex items-center justify-between mt-5 pt-3">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-body-sm text-secondary">verified_user</span>
+<span>Pre-filled with MahaDBT ID: MH-2022-8921</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container transition-colors" title="Bookmark Scheme">
+<span class="material-symbols-outlined text-body-lg">bookmark_border</span>
+</button>
+<button class="px-4 py-2 rounded-lg bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-md text-label-md transition-colors">
+              Guidelines
+            </button>
+<button class="flex items-center gap-1.5 px-4 py-2 rounded-lg bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-colors shadow-sm">
+<span class="material-symbols-outlined text-label-md">open_in_new</span>
+<span>Sync &amp; Apply</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Card 3: National Overseas & Premier STEM Fellowship -->
+<article class="flex flex-col p-6 rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow relative">
+<div class="flex items-start justify-between gap-4">
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center shrink-0 shadow-sm overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Futuristic science and research innovation council badge in polished deep cyan and white minimalist vector styling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrcMmg1M4RlGETeyWUyGYnKEphd0AHLg-ccP72-4Z5sqiGma88QWFp5CkVH9r9KCSwuR_WSvf2yo5ETAkDMd5Ykwc3ErC4ZUqW8h8pIgxk_bcEHLjv3yU6r4R2pdGafHad-LzHU4KeBs32-ap8t6UZUbhbTz9qPW-EeXcpFDPJ10okkaxsPvhyMVvwrlf-EJlGBH9qGVWSdUhpyB_YxFobYVEcULkUZjKJY_Z0FM7c1rrZNUCjDCnU9A"/>
+</div>
+<div>
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-2 py-0.5 rounded-md font-label-sm text-label-sm text-on-surface-variant bg-surface-container uppercase">National STEM Research</span>
+<span class="font-label-sm text-label-sm text-outline">• Dept of Science &amp; Technology</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1">Premier STEM Innovation Grant &amp; Fellowship</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Undergraduate Research Assistantship Grant</p>
+</div>
+</div>
+<div class="flex flex-col items-end shrink-0">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container/50 text-on-secondary-container font-label-md text-label-md font-bold">
+<span class="material-symbols-outlined text-body-sm">stars</span>
+              91% Match
+            </span>
+</div>
+</div>
+<div class="flex flex-wrap items-baseline gap-6 mt-4 pt-4 border-t border-surface-container">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Grant Award</span>
+<div class="font-headline-md text-headline-md font-bold text-on-surface mt-0.5">₹2,50,000 <span class="font-body-sm text-body-sm text-on-surface-variant font-normal">lump sum grant</span></div>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Duration</span>
+<div class="font-body-md text-body-md text-on-surface font-semibold mt-0.5">Academic Year 2024-25</div>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Cohort Size</span>
+<div class="font-body-md text-body-md text-on-surface font-semibold mt-0.5">150 Scholars Nationwide</div>
+</div>
+</div>
+<!-- Explainable AI Box -->
+<div class="mt-4 p-3.5 rounded-xl bg-secondary-container/20 flex flex-col gap-1.5">
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-secondary font-bold">
+<span class="material-symbols-outlined text-label-md">auto_awesome</span>
+<span>Matched because:</span>
+</div>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2.5 py-0.5 rounded-md bg-surface-container-lowest font-body-sm text-body-sm text-on-surface shadow-2xs">CS Major with AI/ML Elective</span>
+<span class="px-2.5 py-0.5 rounded-md bg-surface-container-lowest font-body-sm text-body-sm text-on-surface shadow-2xs">Cumulative CGPA 8.8 &gt; 8.5 Cutoff</span>
+<span class="px-2.5 py-0.5 rounded-md bg-surface-container-lowest font-body-sm text-body-sm text-on-surface shadow-2xs">Institution NIRF Rank #12 (Eligible Pool)</span>
+</div>
+</div>
+<div class="flex items-center justify-between mt-5 pt-3">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-body-sm text-on-surface-variant">event</span>
+<span>Deadline: Dec 10, 2024</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container transition-colors" title="Bookmark Scheme">
+<span class="material-symbols-outlined text-body-lg">bookmark_border</span>
+</button>
+<button class="px-4 py-2 rounded-lg bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-md text-label-md transition-colors">
+              Review Guidelines
+            </button>
+<button class="flex items-center gap-1.5 px-4 py-2 rounded-lg bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-colors shadow-sm">
+<span>Start Application</span>
+</button>
+</div>
+</div>
+</article>
+</div>
+<!-- Right Column: Interactive Pipeline & AI Agent Insights (4 Cols) -->
+<div class="lg:col-span-4 flex flex-col gap-6">
+<!-- AI Agent Quick Insights Box -->
+<div class="p-5 rounded-2xl bg-surface-container-high/60 shadow-sm flex flex-col gap-3 relative overflow-hidden">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="p-1.5 rounded-lg bg-secondary text-on-secondary">
+<span class="material-symbols-outlined text-body-lg">psychology</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface">AI Agent Insight</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary bg-surface-container-lowest px-2 py-0.5 rounded-full font-bold">
+            DBT Alert
+          </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface leading-relaxed">
+<strong class="font-semibold text-secondary">EduGuide Tip:</strong> Your Aadhaar is mapped to <strong class="text-on-surface font-semibold">State Bank of India (SBIN0001423)</strong>. Ensure your NPCI Aadhaar seeding status is active on UIDAI portal to prevent automatic rejection of direct DBT disbursements for MahaDBT.
+        </p>
+<div class="flex items-center justify-between pt-2 border-t border-surface-container">
+<a class="font-label-sm text-label-sm text-primary hover:underline flex items-center gap-1" href="#">
+<span>Check NPCI Status</span>
+<span class="material-symbols-outlined text-body-sm">open_in_new</span>
+</a>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Last pinged: 3d ago</span>
+</div>
+</div>
+<!-- Application Pipeline & Next Steps Checklist -->
+<div class="p-5 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-headline-sm">checklist</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Action Checklist</h3>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container px-2 py-0.5 rounded font-semibold" id="completedCounter">
+            1 of 4 Completed
+          </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Complete these critical items to elevate your application readiness for upcoming deadlines.
+        </p>
+<!-- Interactive Tasks -->
+<div class="flex flex-col gap-2.5 mt-1" id="taskContainer">
+<!-- Task 1 -->
+<label class="flex items-start gap-3 p-3 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer group">
+<input checked="" class="mt-0.5 w-4 h-4 rounded text-primary focus:ring-primary task-checkbox" type="checkbox"/>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface line-through group-has-[:checked]:text-on-surface-variant">Fetch College Bonafide Certificate</span>
+<span class="font-body-sm text-body-sm text-secondary">Synced via DigiLocker • 24 Oct</span>
+</div>
+</label>
+<!-- Task 2 -->
+<label class="flex items-start gap-3 p-3 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer group">
+<input class="mt-0.5 w-4 h-4 rounded text-primary focus:ring-primary task-checkbox" type="checkbox"/>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface group-has-[:checked]:line-through">Upload Father's Form 16 / Income Cert</span>
+<span class="font-body-sm text-body-sm text-tertiary">Required for Central Sector Scheme</span>
+</div>
+</label>
+<!-- Task 3 -->
+<label class="flex items-start gap-3 p-3 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer group">
+<input class="mt-0.5 w-4 h-4 rounded text-primary focus:ring-primary task-checkbox" type="checkbox"/>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface group-has-[:checked]:line-through">Draft SOP for HDFC Badhte Kadam</span>
+<span class="font-body-sm text-body-sm text-primary font-semibold">AI Assistant ready with template</span>
+</div>
+</label>
+<!-- Task 4 -->
+<label class="flex items-start gap-3 p-3 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer group">
+<input class="mt-0.5 w-4 h-4 rounded text-primary focus:ring-primary task-checkbox" type="checkbox"/>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface group-has-[:checked]:line-through">Verify Bank IFSC with Aadhaar NPCI</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Ensures DBT compliance</span>
+</div>
+</label>
+</div>
+<button class="w-full mt-2 py-2.5 rounded-lg bg-surface-container hover:bg-surface-variant text-on-surface font-label-md text-label-md transition-colors flex items-center justify-center gap-1.5">
+<span class="material-symbols-outlined text-body-md">add_task</span>
+<span>Add Custom Deadline or Note</span>
+</button>
+</div>
+<!-- Quick AI Draft Workspace Widget -->
+<div class="p-5 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col gap-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-headline-sm">edit_note</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">SOP Copilot Quickstart</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Your personal narrative for the <em>HDFC Badhte Kadam</em> essay prompt is 65% generated based on your academic projects in Machine Learning.
+        </p>
+<div class="p-3 rounded-lg bg-surface-container text-on-surface-variant font-body-sm text-body-sm italic">
+          "As a third-year Computer Science student passionate about accessible healthcare diagnostics through computer vision..."
+        </div>
+<div class="flex items-center gap-2 pt-1">
+<button class="w-full py-2 rounded-lg bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-colors flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-label-md">auto_awesome</span>
+<span>Open in AI Workspace</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Micro-interaction: Task Checklist Counter
+  document.addEventListener('DOMContentLoaded', () => {
+    const checkboxes = document.querySelectorAll('.task-checkbox');
+    const counter = document.getElementById('completedCounter');
+
+    function updateCounter() {
+      const total = checkboxes.length;
+      const checked = document.querySelectorAll('.task-checkbox:checked').length;
+      if (counter) {
+        counter.textContent = `${checked} of ${total} Completed`;
+      }
+    }
+
+    checkboxes.forEach(cb => {
+      cb.addEventListener('change', updateCounter);
+    });
+
+    // Scanner simulated micro-interaction
+    const scanBtn = document.getElementById('runScanBtn');
+    if (scanBtn) {
+      scanBtn.addEventListener('click', () => {
+        const originalText = scanBtn.innerHTML;
+        scanBtn.disabled = true;
+        scanBtn.innerHTML = `
+          <span class="material-symbols-outlined text-body-lg animate-spin">sync</span>
+          <span>Matching 2,400+ Portals...</span>
+        `;
+        setTimeout(() => {
+          scanBtn.innerHTML = `
+            <span class="material-symbols-outlined text-body-lg">done</span>
+            <span>Refreshed • 14 Schemes</span>
+          `;
+          setTimeout(() => {
+            scanBtn.innerHTML = originalText;
+            scanBtn.disabled = false;
+          }, 2000);
+        }, 1200);
+      });
+    }
+  });
+</script></main></div></body></html>
